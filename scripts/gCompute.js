@@ -11,8 +11,7 @@ let getGoogleData = async(shop, strategy) => {
         response = await request.get(gURL);
         gData = JSON.parse(response);
     } catch (error) {
-        if (error.message) throw new Error(error.message);
-        throw new Error();
+        console.log('Google failed to analyze page..')
     }
     return gData;
 }
