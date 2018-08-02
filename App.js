@@ -30,7 +30,7 @@ async function start() {
     const apiKey = process.env.SHOPIFY_API_KEY;
     const apiSecret = process.env.SHOPIFY_API_SECRET;
     const scopes = ['read_themes', 'write_themes', 'read_products', 'write_products'];
-    const APP_URL = "https://dropthemizerapp.azurewebsites.net"; // Replace this with your HTTPS Forwarding address
+    const APP_URL = "https://dropthemizer-v1.appspot.com"; // Replace this with your HTTPS Forwarding address
 
     //Set up app view engine/static paths
     app.set('view engine', 'ejs');
