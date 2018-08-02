@@ -81,7 +81,7 @@ $(document).ready(function() {
             $('.mobile-loader').hide();
             $('.mobile-screenshot').show();
             $('.mobile-loader-text').text('Timeout. Could not load image');
-        }, 30000);
+        }, 60000);
     }
 
     function poll() {
