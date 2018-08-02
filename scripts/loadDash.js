@@ -1,15 +1,8 @@
-let loadDash = async(shop, getRequestHeaders, gData) => {
-    const request = require('request-promise');
-    let shopRequestUrl = 'https://' + shop + '/admin/shop.json';
-    let shopResponse, shopData, dashboardData;
+let loadDash = async(gData) => {
+    let dashboardData;
 
     try {
-        shopResponse = await request.get(shopRequestUrl, { headers: getRequestHeaders });
-
-        shopData = JSON.parse(shopResponse);
-
         dashboardData = {
-            customer_name: shopData.shop.shop_owner,
             speed_score: gData.ruleGroups.SPEED.score,
             image_bytes: gData.pageStats.imageResponseBytes,
             http_resources: gData.pageStats.numberResources,

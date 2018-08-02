@@ -226,7 +226,7 @@ async function start() {
                     pollData.fullyOptimized = optimized || false;
                     pollData.uninstalled = uninstalled || false;
                     let gData = await gapi.getGoogleData(shop, strategy);
-                    let dashboardData = await dash.loadDash(shop, getRequestHeaders, gData);
+                    let dashboardData = await dash.loadDash(gData);
                     pollData.dashReady = true;
                     pollData.dashboardData = dashboardData;
                     pollData.screenshot = screenshot || await screenshot_server.image(shop, db);
