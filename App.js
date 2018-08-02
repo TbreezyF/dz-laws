@@ -123,7 +123,7 @@ async function start() {
                             "shop": shop
                         }
                     }
-
+                    console.log('Querying DB for ' + shop + '\n');
                     let current_user = await db.get(queryParams).promise();
                     let strategy = 'mobile';
 
